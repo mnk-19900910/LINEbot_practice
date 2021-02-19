@@ -42,7 +42,19 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                 // replyMessage()で返信し、そのプロミスをevents_processedに追加。
                 events_processed.push(bot.replyMessage(event.replyToken, {
                     type: "text",
-                    text: "まだかな〜まだかな〜"
+                    text: "$ LINE emoji $",
+                    "emojis": [
+                        {
+                            "index": 0,
+                            "productId": "5ac1bfd5040ab15980c9b435",
+                            "emojiId": "001"
+                        },
+                        {
+                            "index": 13,
+                            "productId": "5ac1bfd5040ab15980c9b435",
+                            "emojiId": "002"
+                        }
+                    ]
                 }));
             }
             else{
